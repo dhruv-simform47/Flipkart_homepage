@@ -1,243 +1,418 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap demo</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
     <style>
+        body {
+            background-color: rgb(241 241 241 / 99%)
+        }
+        .sections
+        {
+            width:90%;
+            background-color: white;
+        }
+        .catimg {
+            height: 100px;
+            width: 150px;
+            padding: 5px;
+        }
+
+        .catimg>img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .main-body {
+            background-color: rgba(239, 244, 252, 0.822);
+            height:auto;
+            align-items: center;
+            border-top: 1px solid rgb(216, 209, 209);
+        }
+       
+
+        .prod-list > div {                    
+            width: 15%;
+        }
+
+        .prod-list-2 > div {                    
+            width: 12%;
+        }
+
+        .image {
+            height: 150px;
+            width: 150px;
+            padding: 10px;
+        }
+
+        .pro-img > img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .dt {
+            margin-bottom: 1rem;
+        }
+
+
 
     </style>
+
 </head>
 
 <body>
+    <header class="container-fluid bg-primary">
+        <nav class="d-flex justify-content-evenly">
 
+            <div class="nav1 bg-secondary ">
+                <ul class="m-0 list-group list-group-horizontal">
+                    <li class="list-group-item ">
+                        Logo
+                    </li>
+                    <li class="list-group-item ">
+                        Searchbar
+                    </li>
+                </ul>
+            </div>
+            <div class="nav2 bg-info">
+                <ul class="m-0 list-group list-group-horizontal">
+                    <li class="list-group-item ">
+                        Login-btn
+                    </li>
+                    <li class="list-group-item ">
+                        more-drodown
+                    </li>
+                    <li class="list-group-item ">
+                        cart
+                    </li>
+                </ul>
 
+            </div>
+        </nav>
+    </header>
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            .central {
-                background-color: rgba(239, 244, 252, 0.822);
-                height: 800px;
-                border-top: 1px solid rgb(216, 209, 209);
-            }
-            .product
-            {
-                max-width:80%;
-                width:80%;
-                background-color: aqua;
-
-            }
-            .ad
-            {
-                width:20%;
-                background-color: b;
-            }
-            .prod-list > div
-            {
-                border: 1px solid grey ;
-            } 
-        </style>
-
-    </head>
-
-    <body>
-        <header class="container-fluid bg-primary">
-            <nav class="d-flex justify-content-evenly">
-
-                <div class="nav1 bg-secondary ">
-                    <ul class="m-0 list-group list-group-horizontal">
-                        <li class="list-group-item ">
-                            Logo
-                        </li>
-                        <li class="list-group-item ">
-                            Searchbar
-                        </li>
-                    </ul>
+    <div class="cat-nav container-fluid bg-white mb-3 border-bottom border-2">
+        <div class="container d-flex justify-content-evenly ">
+            <div class="box p-1">
+                <div class="catimg">
+                    <img src="prac_Images/offer.jpeg" alt="Box">
                 </div>
-                <div class="nav2 bg-info">
-                    <ul class="m-0 list-group list-group-horizontal">
-                        <li class="list-group-item ">
-                            Login-btn
-                        </li>
-                        <li class="list-group-item ">
-                            more-drodown
-                        </li>
-                        <li class="list-group-item ">
-                            cart
-                        </li>
-                    </ul>
 
+                <p class="small border border-0 mt-1 mb-0 bg-white text-center">Top Offers</p>
+
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+                    <img src="prac_Images/grocery.jpg" alt="Box">
                 </div>
-            </nav>
-        </header>
 
-        <div class="cat-nav container-fluid bg-white mt-3 pb-3">
-            <div class="container d-flex justify-content-evenly ">
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <p class="small border border-0 mt-1 bg-white">Top Offers</p>
+                <p class="small border border-0 mt-1 bg-white text-center">Grocery</p>
 
+
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+
+                    <img src="prac_Images/Mobile.jpg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <p class="small border border-0 mt-1 bg-white">Grocery</p>
 
+                <p class="small border border-0 mt-1 bg-white text-center">Mobiles</p>
 
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
 
+                    <img src="prac_Images/Fashion.jpg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
 
-                    <p class="small border border-0 mt-1 bg-white">Mobiles</p>
+                <p class="text-center"><select class="small border border-0 mt-1 bg-white">
+                        <option value="Fashion text-center">Fashion</option>
+                    </select></p>
 
+
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+
+                    <img src="prac_Images/Electronics.jpg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <select class="small border border-0 mt-1 bg-white">
-                        <option value="Fashion">Fashion</option>
-                    </select>
-
-
-                </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
+                <p class="text-center">
                     <select class="small border border-0 mt-1 bg-white">
                         <option value="Electronic">Electronic</option>
                     </select>
+                </p>
 
+
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+
+                    <img src="prac_Images/Home.jpg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
+                <p class="text-center">
                     <select class="small border border-0 mt-1 bg-white">
                         <option value="Home">Home</option>
                     </select>
+                </p>
 
 
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+
+                    <img src="prac_Images/appliances.jpeg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
+                <p class="text-center">
+
                     <select class="small border border-0 mt-1 bg-white">
                         <option value="Appliances">Appliances</option>
                     </select>
+                </p>
 
 
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+
+                    <img src="prac_Images/Travel.jpg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <p class="small border border-0 mt-1 bg-white">Travel</p>
+
+                <p class="small border border-0 mt-1 bg-white text-center">Travel</p>
 
 
+            </div>
+            <div class="box  p-1">
+                <div class="catimg">
+                    <img src="prac_Images/Toys.jpg" alt="Box">
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
+                <p class="text-center">
+
                     <select class="small border border-0 mt-1 bg-white">
-                        <option value="Beauty Toy And More">Beauty Toy And More</option>
+                        <option value="Beauty Toy And More">Beauty Toy & More</option>
                     </select>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+   
+<div class="main-body container-fluid d-flex flex-column">
+    <section class="deals-body sections bg-white d-flex ">
+        <div class="product border-bottom border-2 ">
+            <div class="Title p-2 border-bottom d-flex justify-content-between">
+                <div class="left "><span class="h5">Deal of The Day</span>
+                    <time class="text-secondary fw-bold"><i class="bi bi-clock px-3"></i>22 : 36 :07 Left</time>
+                </div>
+                <div class="right me-5 px-5 b ">
+                    <button class="btn btn-primary rounded-0">VIEW ALL</button>
+                </div>
 
 
+            </div>
+
+
+            <div class="prod-list d-flex flex-grow-1 flex-shrink-0 overflow-x-auto">
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/Watch.jpg" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small ">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1">
+                    <div class="pro-img">
+                        <img src="prac_Images/temple.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small dt  ">Casio,Fasttrack,Sonata...
+                            <span class="text-success small dt ">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small dt">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1">
+                    <div class="pro-img">
+                        <img src="prac_Images/cases.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/homedecore.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class=" p-3 my-1">
+                    <div class="pro-img">
+                        <img src="prac_Images/cloth.png" alt="pro" height="150px">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/phone.jpeg" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/vass.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/vass.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="central container-fluid">
+        <div class="ad ">
+            <div class="ad-img justify-content-center">
+                <img src="prac_Images/ad.png" class="object-fit-contain" alt="Advertisement"  width="240px">
+            </div>
+        </div>
+    </section>
+    <section class="books-music-body sections mt-3">
+<div class="product border-bottom border-2 ">
+            <div class="Title p-2 border-bottom d-flex justify-content-between">
+                <div class="left "><span class="h5">Books & Musical Instrument</span><br>
+                    <small class="text-secondary">Shop Now!</small>
+                    
+                </div>
+                <div class="right me-0 px-5 b ">
+                    <button class="btn btn-primary btn-small rounded-0">VIEW ALL</button>
+                </div>
 
-            <section class="deals sections bg-white d-flex container">
-                <div class="product w-75 ">
-                    <div class="Title p-2 border d-flex">
-                        <div class="left"><span class="h5">Deal of The Day</span>
-                        <time class="text-secondary"><i class="bi bi-clock px-3"></i>22 : 36 :07 left</time>
+
+            </div>
+
+
+            <div class="prod-list-2 d-flex overflow-x-auto">
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/Watch.jpg" alt="pro">
                     </div>
-                    <div class="right ">
-                        <button class="btn-sm btn-primary">View All</button>
-                    </div>
-                        
-
-                    </div>
-
-
-                    <div class="prod-list d-flex"> 
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
-                        <div class="card p-3 m-2 ">
-                            <div class="image">
-                                <img src="" alt="pro">
-                            </div>
-                            <div class="detail">
-                                details
-                            </div>
-                        </div>
+                    <div class="detail">
+                        <p class="text-center b small ">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
                     </div>
                 </div>
-                <div class="ad">Advertisment</div>
-            </section >
-            <section class="books_music sections container">
-
-            </section>
+                <div class="p-3 my-1">
+                    <div class="pro-img">
+                        <img src="prac_Images/temple.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small dt  ">Casio,Fasttrack,Sonata...
+                            <span class="text-success small dt ">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small dt">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1">
+                    <div class="pro-img">
+                        <img src="prac_Images/cases.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/homedecore.png" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class=" p-3 my-1">
+                    <div class="pro-img">
+                        <img src="prac_Images/cloth.png" alt="pro" height="150px">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3 my-1 ">
+                    <div class="pro-img">
+                        <img src="prac_Images/phone.jpeg" alt="pro">
+                    </div>
+                    <div class="detail">
+                        <p class="text-center b small">Casio,Fasttrack,Sonata...
+                            <span class="text-success small">Upto 80%+Extra 10%off</span>
+                            <span class="text-secondary small">Knockout Deals</span>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </body>
+        
+    </section>
+</div>
+</body>
 
-    </html>
+</html>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
