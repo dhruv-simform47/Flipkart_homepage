@@ -15,11 +15,12 @@
         body {
             background-color: rgb(241 241 241 / 99%)
         }
-        .sections
-        {
-            width:90%;
+
+        .sections {
+            width: 90%;
             background-color: white;
         }
+
         .catimg {
             height: 100px;
             width: 150px;
@@ -34,17 +35,17 @@
 
         .main-body {
             background-color: rgba(239, 244, 252, 0.822);
-            height:auto;
+            height: auto;
             align-items: center;
             border-top: 1px solid rgb(216, 209, 209);
         }
-       
 
-        .prod-list > div {                    
+
+        .prod-list>div {
             width: 15%;
         }
 
-        .prod-list-2 > div {                    
+        .prod-list-2>div {
             width: 12%;
         }
 
@@ -54,8 +55,15 @@
             padding: 10px;
         }
 
-        .pro-img > img {
+        .pro-img>img {
             width: 100%;
+            object-fit: contain;
+        }
+
+
+        .pro-img-s2>img {
+            width: 100%;
+            height: 170px;
             object-fit: contain;
         }
 
@@ -65,36 +73,85 @@
 
 
 
+        .custom-navbar {
+            background-color: rgb(42, 133, 236);
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .search-input {
+            height: 38px;
+        }
+
+        .search-btn {
+            background-color: white;
+            border: none;
+        }
+
+
+        .login-btn {
+            background-color: white;
+            color: rgb(42, 133, 236);
+            font-weight: 600;
+            border-radius: 2px;
+        }
     </style>
 
 </head>
 
 <body>
     <header class="container-fluid bg-primary">
-        <nav class="d-flex justify-content-evenly">
+        <nav class="navbar navbar-expand-lg justify-content-around">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center flex-grow-1 justify-content-center">
+                    <a class="navbar-brand m-0 p-0" href="#">
+                        <img src="prac_Images/Flipkart.png" class="logo-img" alt="Flipkart Logo">
+                    </a>
 
-            <div class="nav1 bg-secondary ">
-                <ul class="m-0 list-group list-group-horizontal">
-                    <li class="list-group-item ">
-                        Logo
+                    <form class="d-flex ms-3" style="width: 40%;">
+                        <div class="input-group">
+                            <input class="form-control search-input" type="search"
+                                placeholder="Search for products, brands & more">
+                            <button class="btn search-btn" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <ul class="navbar-nav align-items-center">
+
+                    <li class="nav-item me-3">
+                        <button class="btn login-btn px-4">
+                            Login
+                        </button>
                     </li>
-                    <li class="list-group-item ">
-                        Searchbar
+
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">Trending</a></li>
+                            <li><a class="dropdown-item" href="#">Download App</a></li>
+                        </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            Cart
+                        </a>
+                    </li>
+
                 </ul>
-            </div>
-            <div class="nav2 bg-info">
-                <ul class="m-0 list-group list-group-horizontal">
-                    <li class="list-group-item ">
-                        Login-btn
-                    </li>
-                    <li class="list-group-item ">
-                        more-drodown
-                    </li>
-                    <li class="list-group-item ">
-                        cart
-                    </li>
-                </ul>
+
 
             </div>
         </nav>
@@ -205,207 +262,207 @@
         </div>
     </div>
 
-   
-<div class="main-body container-fluid d-flex flex-column">
-    <section class="deals-body sections bg-white d-flex ">
-        <div class="product border-bottom border-2 ">
-            <div class="Title p-2 border-bottom d-flex justify-content-between">
-                <div class="left "><span class="h5">Deal of The Day</span>
-                    <time class="text-secondary fw-bold"><i class="bi bi-clock px-3"></i>22 : 36 :07 Left</time>
-                </div>
-                <div class="right me-5 px-5 b ">
-                    <button class="btn btn-primary rounded-0">VIEW ALL</button>
+
+    <div class="main-body container-fluid d-flex flex-column border-0">
+        <section class="deals-body sections bg-white d-flex ">
+            <div class="product border-bottom border-2 ">
+                <div class="Title p-2 border-bottom d-flex justify-content-between">
+                    <div class="left "><span class="h5">Deal of The Day</span>
+                        <time class="text-secondary fw-bold"><i class="bi bi-clock px-3"></i>22 : 36 :07 Left</time>
+                    </div>
+                    <div class="right me-5 px-5 b ">
+                        <button class="btn btn-primary rounded-0">VIEW ALL</button>
+                    </div>
+
+
                 </div>
 
 
+                <div class="prod-list d-flex flex-grow-1 flex-shrink-0 overflow-x-auto">
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img">
+                            <img src="prac_Images/Watch.jpg" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small ">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1">
+                        <div class="pro-img">
+                            <img src="prac_Images/temple.png" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small dt  ">Casio,Fasttrack,Sonata...
+                                <span class="text-success small dt ">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small dt">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1">
+                        <div class="pro-img">
+                            <img src="prac_Images/cases.png" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img">
+                            <img src="prac_Images/homedecore.png" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" p-3 my-1">
+                        <div class="pro-img">
+                            <img src="prac_Images/cloth.png" alt="pro" height="150px">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img">
+                            <img src="prac_Images/phone.jpeg" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img">
+                            <img src="prac_Images/vass.png" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img">
+                            <img src="prac_Images/vass.png" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ad ">
+                <div class="ad-img justify-content-center">
+                    <img src="prac_Images/ad.png" class="object-fit-contain" alt="Advertisement" width="240px">
+                </div>
+            </div>
+        </section>
+        <section class="books-music-body sections mt-3">
+            <div class="product border-bottom border-2 ">
+                <div class="Title p-2 border-bottom d-flex justify-content-between">
+                    <div class="left "><span class="h5">Books & Musical Instrument</span><br>
+                        <small class="text-secondary">Shop Now!</small>
+
+                    </div>
+                    <div class="right me-0 px-5 b ">
+                        <button class="btn btn-primary btn-small rounded-0">VIEW ALL</button>
+                    </div>
+
+
+                </div>
+                <div class="prod-list-2 d-flex overflow-x-auto">
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img-s2">
+                            <img src="prac_Images/Harmonium.jpg" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small ">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1">
+                        <div class="pro-img-s2">
+                            <img src="prac_Images/Flutes.jpg" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small dt  ">Casio,Fasttrack,Sonata...
+                                <span class="text-success small dt ">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small dt">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1">
+                        <div class="pro-img-s2">
+                            <img src="prac_Images/AcousticGuitars-2.jpg" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img-s2">
+                            <img src="prac_Images/MusicalAccessories.jpg" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" p-3 my-1">
+                        <div class="pro-img-s2">
+                            <img src="prac_Images/MicrophoneAccessories.png" alt="pro" height="150px">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-3 my-1 ">
+                        <div class="pro-img-s2">
+                            <img src="prac_Images/guitar.png" alt="pro">
+                        </div>
+                        <div class="detail">
+                            <p class="text-center b small">Casio,Fasttrack,Sonata...
+                                <span class="text-success small">Upto 80%+Extra 10%off</span>
+                                <span class="text-secondary small">Knockout Deals</span>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
 
-
-            <div class="prod-list d-flex flex-grow-1 flex-shrink-0 overflow-x-auto">
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/Watch.jpg" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small ">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1">
-                    <div class="pro-img">
-                        <img src="prac_Images/temple.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small dt  ">Casio,Fasttrack,Sonata...
-                            <span class="text-success small dt ">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small dt">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1">
-                    <div class="pro-img">
-                        <img src="prac_Images/cases.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/homedecore.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class=" p-3 my-1">
-                    <div class="pro-img">
-                        <img src="prac_Images/cloth.png" alt="pro" height="150px">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/phone.jpeg" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/vass.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/vass.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ad ">
-            <div class="ad-img justify-content-center">
-                <img src="prac_Images/ad.png" class="object-fit-contain" alt="Advertisement"  width="240px">
-            </div>
-        </div>
-    </section>
-    <section class="books-music-body sections mt-3">
-<div class="product border-bottom border-2 ">
-            <div class="Title p-2 border-bottom d-flex justify-content-between">
-                <div class="left "><span class="h5">Books & Musical Instrument</span><br>
-                    <small class="text-secondary">Shop Now!</small>
-                    
-                </div>
-                <div class="right me-0 px-5 b ">
-                    <button class="btn btn-primary btn-small rounded-0">VIEW ALL</button>
-                </div>
-
-
-            </div>
-
-
-            <div class="prod-list-2 d-flex overflow-x-auto">
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/Watch.jpg" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small ">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1">
-                    <div class="pro-img">
-                        <img src="prac_Images/temple.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small dt  ">Casio,Fasttrack,Sonata...
-                            <span class="text-success small dt ">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small dt">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1">
-                    <div class="pro-img">
-                        <img src="prac_Images/cases.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/homedecore.png" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class=" p-3 my-1">
-                    <div class="pro-img">
-                        <img src="prac_Images/cloth.png" alt="pro" height="150px">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-3 my-1 ">
-                    <div class="pro-img">
-                        <img src="prac_Images/phone.jpeg" alt="pro">
-                    </div>
-                    <div class="detail">
-                        <p class="text-center b small">Casio,Fasttrack,Sonata...
-                            <span class="text-success small">Upto 80%+Extra 10%off</span>
-                            <span class="text-secondary small">Knockout Deals</span>
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </section>
-</div>
+        </section>
+    </div>
 </body>
 
 </html>
