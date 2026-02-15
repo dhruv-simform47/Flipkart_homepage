@@ -1,142 +1,470 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
-    <style>
-     
-    </style>
-</head>
-
-<body>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>
-    
-</style>
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+
+    <style>
+        .catimg {
+            max-height: 70px;
+        }
+
+        .cat-scroll {
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .cat-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            width: 180px;
+        }
+
+        .item_b {
+            width: 150px;
+        }
+
+        .pro-img>img {
+            max-height: 150px;
+        }
+        .product-list
+        {
+            scrollbar-width: none;
+        }
+        .ad-img {
+            height: 40vh;
+        }
+
+        @media (min-width: 992px) {
+            .ad-img {
+                height: 100%;
+            }
+        }
+
+        .scroll-btn {
+            position: absolute;
+            padding: 20px 5px;
+            background-color: rgba(255, 255, 255, 0.625);
+            cursor: pointer;
+        }
+
+        .left-btn {
+            top: 30%;
+
+        }
+
+        .right-btn {
+            
+            top: 30%;
+            right: 0;
+           
+
+        }
+    </style>
 </head>
 
 <body>
-    <header class="container-fluid bg-primary">
-        <nav class="d-flex justify-content-evenly">
 
-            <div class="nav1 bg-secondary ">
-                <ul class="m-0 list-group list-group-horizontal">
-                    <li class="list-group-item ">
-                        Logo
-                    </li>
-                    <li class="list-group-item ">
-                        Searchbar
-                    </li>
-                </ul>
-            </div>
-            <div class="nav2 bg-info">
-                <ul class="m-0 list-group list-group-horizontal">
-                    <li class="list-group-item "> 
-                        Login-btn
-                    </li>
-                    <li class="list-group-item ">
-                        more-drodown
-                    </li>
-                    <li class="list-group-item "> 
-                        cart
-                    </li>
-                </ul>
+    <header class="bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg p-0">
 
-            </div>
-        </nav>
-</header>
-        <div class="cat-nav container-fluid bg-white mt-3">
-            <div class="central container d-flex justify-content-evenly ">
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <p class="small border border-0 mt-1 bg-white">Top Offers</p>
+                <a class="navbar-brand p-0" href="#">
+                    <img src="prac_Images/Flipkart.png" height="40">
+                </a>
+
+                <button class="navbar-toggler btn btn-sm" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+
+                    <form class="d-flex me-auto mt-3 mt-lg-0" style="max-width:600px; width:100%;">
+                        <div class="input-group">
+                            <input class="form-control  border-0" placeholder="Search for products,brands & more...">
+                            <button class="btn btn-light border-0">
+                                <i class="bi bi-search text-primary"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="d-flex align-items-center mt-3 mt-lg-0">
+
+                        <button type="button" class="nav-item btn btn-sm bg-white text-primary px-4 me-2 border-0"
+                            href="#">Login</button>
+                        <div class="nav-item dropdown me-1 btn">
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">
+                                More
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                                <li><a class="dropdown-item" href="#">Trending</a></li>
+                                <li><a class="dropdown-item" href="#">Download App</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-item btn bg-primary border-0 text-white px-2 me-2"
+                            href="https://www.youtube.com/"><i class="bi bi-cart me-2"></i>Cart</a>
+
+                    </div>
+            </nav>
+        </div>
+    </header>
+    <!-- category navigation section start -->
+
+    <section class="bg-white border-bottom border-2">
+        <div class="container ">
+            <div class="d-flex justify-content-evenly align-content-center overflow-x-auto cat-scroll mt-2">
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
+                        <img src="prac_Images/offer.jpeg" alt="Box" class="catimg img-fluid">
+
+                        <p class="small border border-0 mt-1 mb-0 bg-white text-center">Top Offers</p>
+                    </a>
+                </div>
+
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
+                        <img src="prac_Images/grocery.jpg" class="catimg img-fluid">
+
+                        <p class="small border border-0 mt-1 bg-white text-center">Grocery</p>
+                    </a>
 
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                       <p class="small border border-0 mt-1 bg-white">Grocery</p>
-                    
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
 
-                   
-                </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    
-                    <p class="small border border-0 mt-1 bg-white">Mobiles</p>
-                    
-                </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <select class="small border border-0 mt-1 bg-white">
-                    <option value="Fashion">Fashion</option>
-                </select>
-                    
-                    
-                </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <select class="small border border-0 mt-1 bg-white">
-                    <option value="Electronic">Electronic</option>
-                </select>
-                    
-                </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <select class="small border border-0 mt-1 bg-white">
-                    <option value="Home">Home</option>
-                </select>
-                    
-                    
-                </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <select class="small border border-0 mt-1 bg-white">
-                    <option value="Appliances">Appliances</option>
-                </select>
 
-               
+                        <img src="prac_Images/Mobile.jpg" class="catimg img-fluid">
+
+
+                        <p class="small border border-0 mt-1 bg-white text-center">Mobiles</p>
+                    </a>
+
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <p class="small border border-0 mt-1 bg-white">Travel</p>
-                    
-                  
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
+
+
+                        <img src="prac_Images/Fashion.jpg" class="catimg img-fluid">
+
+                        <p class="text-center"><select class="small border border-0 mt-1 bg-white">
+                                <option value="Fashion text-center">Fashion</option>
+                            </select></p>
+
+                    </a>
+
                 </div>
-                <div class="box card p-1">
-                    <img src="" alt="Box">
-                    <select class="small border border-0 mt-1 bg-white">
-                    <option value="Beauty Toy And More">Beauty Toy And More</option>
-                </select>
-          
-                  
+                <div class="flex-shrink-0 text-center px-3">
+
+                    <a href="#" class="nav-link">
+
+                        <img src="prac_Images/Electronics.jpg" class="catimg img-fluid">
+
+                        <p class="text-center">
+                            <select class="small border border-0 mt-1 bg-white">
+                                <option value="Electronic">Electronic</option>
+                            </select>
+                        </p>
+
+                    </a>
+
+                </div>
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
+
+
+                        <img src="prac_Images/Home.jpg" class="catimg img-fluid">
+
+                        <p class="text-center">
+                            <select class="small border border-0 mt-1 bg-white">
+                                <option value="Home">Home</option>
+                            </select>
+                        </p>
+                    </a>
+
+
+                </div>
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
+
+
+                        <img src="prac_Images/appliances.jpeg" class="catimg img-fluid">
+
+                        <p class="text-center">
+
+                            <select class="small border border-0 mt-1 bg-white">
+                                <option value="Appliances">Appliances</option>
+                            </select>
+                        </p>
+
+                    </a>
+
+                </div>
+                <div class="flex-shrink-0 text-center px-3">
+
+                    <a href="#" class="nav-link">
+
+                        <img src="prac_Images/Travel.jpg" class="catimg img-fluid">
+
+
+                        <p class="small border border-0 mt-1 bg-white text-center">Travel</p>
+                    </a>
+
+                </div>
+                <div class="flex-shrink-0 text-center px-3">
+                    <a href="#" class="nav-link">
+
+                        <img src="prac_Images/Toys.jpg" class="catimg img-fluid">
+
+                        <p class="text-center">
+
+                            <select class="small border border-0 mt-1 bg-white">
+                                <option value="Beauty Toy And More">Beauty,Toy & More</option>
+                            </select>
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>
-    
-</body>
 
-</html>
+    </section>
+    <!-- category navigation section End -->
+
+    <!-- main-body start -->
+
+    <div class="container mt-3">
+        <section class="deals-section  border-bottom border-2">
+            <div class="wrapper row">
+                <div class="product col-lg-10">
+                    <div class="title d-flex justify-content-between border-bottom border-2">
+                        <div class="left ">
+                            <span class="h5 ">Deals of The Day</span>
+                            <time class="text-muted fw-bold "><i class="bi bi-clock px-1"></i>22:36:07 Left</time>
+                        </div>
+                        <div class="right me-5 px-lg-5 px-sm-2 mb-2 ">
+                            <button class="btn btn-primary btn-sm btn-md rounded-0">VIEW ALL</button>
+                        </div>
+                    </div>
+                    <div class="position-relative">
+                        <button class="scroll-btn left-btn">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="product-list d-flex gap-3 overflow-x-auto">
+                            <div class="item p-2 flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/Watch.jpg" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Casio,Fasttrack,Sonata... <br>
+                                        <span class="text-success small">Upto 80%+Extra 10%off</span> <br>
+                                        <span class="text-muted small">Knockout Deals</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/temple.png" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Home Temple & more .. <br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Space saving Furnitue</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/cases.png" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Premium Tablet cases..
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">For Top Model</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/homedecore.png"
+                                        alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Best Of Sofas.. <br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Classic Luxery</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/cloth.png" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Comfortable Fabric,Best... <br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Knockout Deals</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/phone.jpeg" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Nothing Smart... <br>
+                                        <span class="text-success small">Starting At 29,999.</span> <br>
+                                        <span class="text-muted small">Best In the Market</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/Lava.jpg" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Lava Keypad... <br>
+                                        <span class="text-success small">Starting At 899 .</span> <br>
+                                        <span class="text-muted small">Knockout Deals</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button class="scroll-btn right-btn">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="ad col-lg-2">
+                    <img src="prac_Images/ad.png" class="w-100 ad-img img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section class="books-section mt-3  border-bottom border-2">
+            <div class="wrapper row">
+                <div class="product col-lg-12">
+                    <div class="title d-flex justify-content-between border-bottom border-2">
+                        <div class="left ">
+                            <span class="h5 ">Books & Music Instruments</span>
+                            <p class="text-secondary small">shop Now</p>
+                        </div>
+                        <div class="right me-5 px-lg-5 px-sm-2 mb-2 ">
+                            <button class="btn btn-primary btn-sm btn-md rounded-0">VIEW ALL</button>
+                        </div>
+                    </div>
+                    <div class="position-relative">
+                        <button class="scroll-btn left-btn">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="product-list d-flex gap-3 overflow-x-auto">
+                            <div class="item_b p-2 flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/Harmonium.jpg" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Harmonium<br>
+                                        <span class="text-success small">Upto 60% off</span> <br>
+                                        <span class="text-muted small"> Shop Now!</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_b flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/MusicalAccessories.jpg"
+                                        alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Musical Accessories <br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Best Now..</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_b flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/AcousticGuitars-2.jpg"
+                                        alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">AcousticGuitars <br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Sounds luxery..</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_b flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain"
+                                        src="prac_Images/MicrophoneAccessories.png" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">MicrophoneAccessories<br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Clearity is Must</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_b flex-shrink-0 text-center">
+                                <div class="pro-img">
+                                    <img class="img-fluid object-fit-contain" src="prac_Images/book.jpeg" alt="pro">
+                                </div>
+                                <div class="detail">
+                                    <p class="text-center b small ">Self Educating Book <br>
+                                        <span class="text-success small">Extra 10%off</span> <br>
+                                        <span class="text-muted small">Grab your knowledge</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <button class="scroll-btn right-btn">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!-- main-body End-->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script>
+    const container = document.querySelector('.product-list');
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
+
+    rightBtn.addEventListener('click', () => {
+        container.scrollBy({
+            left: 300,
+            behavior: 'smooth'
+        });
+    });
+
+    leftBtn.addEventListener('click', () => {
+        container.scrollBy({
+            left: -300,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
 </body>
 
 </html>
