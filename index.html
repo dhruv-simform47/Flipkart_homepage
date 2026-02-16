@@ -11,6 +11,9 @@
 
 
     <style>
+        body{
+            background-color: rgb(239, 244, 247);
+        }
         .catimg {
             max-height: 70px;
         }
@@ -24,7 +27,7 @@
             display: none;
             height:20px;
         }
-
+        
         .item {
             width: 180px;
         }
@@ -33,6 +36,10 @@
             width: 150px;
         }
 
+        .title
+        {
+            border-bottom:1px solid rgba(211, 211, 211, 0.747);
+        }
         .pro-img>img {
             max-height: 150px;
         }
@@ -92,8 +99,8 @@
 
                     <form class="d-flex me-auto mt-3 mt-lg-0" style="max-width:600px; width:100%;">
                         <div class="input-group">
-                            <input class="form-control  border-0" placeholder="Search for products,brands & more...">
-                            <button class="btn btn-light border-0">
+                            <input class="form-control rounded-0  border-0" placeholder="Search for products,brands & more...">
+                            <button class="btn btn-light border-0 rounded-0">
                                 <i class="bi bi-search text-primary"></i>
                             </button>
                         </div>
@@ -123,7 +130,7 @@
     </header>
     <!-- category navigation section start -->
 
-    <section class="bg-white border-bottom border-2">
+    <section class="bg-white border border-bottom border-2">
         <div class="container ">
             <div class="d-flex justify-content-evenly align-content-center overflow-x-auto cat-scroll mt-2">
                 <div class="flex-shrink-0 text-center px-3">
@@ -244,11 +251,11 @@
 
     <!-- main-body start -->
 
-    <div class="container mt-3">
-        <section class="deals-section  border-bottom border-2">
+    <div class="container mt-3 main-body">
+        <section class="deals-section border-bottom border-2 bg-white">
             <div class="wrapper row">
-                <div class="product col-lg-10">
-                    <div class="title d-flex justify-content-between border-bottom border-2">
+                <div class="product py-3 px-4 col-lg-10">
+                    <div class="title d-flex justify-content-between ">
                         <div class="left ">
                             <span class="h5 ">Deals of The Day</span>
                             <time class="text-muted fw-bold "><i class="bi bi-clock px-1"></i>22:36:07 Left</time>
@@ -353,9 +360,9 @@
             </div>
         </section>
 
-        <section class="books-section mt-3  border-bottom border-2">
+        <section class="books-section mt-3  border-bottom border-2 bg-white">
             <div class="wrapper row">
-                <div class="product col-lg-12">
+                <div class="product col-lg-12 py-3 px-4 ">
                     <div class="title d-flex justify-content-between border-bottom border-2">
                         <div class="left ">
                             <span class="h5 ">Books & Music Instruments</span>
